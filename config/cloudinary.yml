@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hm9te9vxa
+  api_key: '994314725461379'
+  api_secret: eR3z44CDFVJWV3papmtc1pKcgUc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hm9te9vxa
+  api_key: '994314725461379'
+  api_secret: eR3z44CDFVJWV3papmtc1pKcgUc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hm9te9vxa
+  api_key: '994314725461379'
+  api_secret: eR3z44CDFVJWV3papmtc1pKcgUc
+  enhance_image_tag: true
+  static_image_support: false
