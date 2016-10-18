@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017001934) do
+ActiveRecord::Schema.define(version: 20161018195518) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20161017001934) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+  end
+
+  create_table "uxsers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "avatar"
+    t.boolean  "remove_avatar"
+    t.string   "avatar_cache"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
