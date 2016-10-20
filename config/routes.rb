@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :uzsers
   resources :uxsers
   resources :posts
   root :to => 'posts#index'

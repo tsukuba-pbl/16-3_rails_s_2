@@ -1,0 +1,1 @@
+json.partial! "uzsers/uzser", uzser: @uzser
