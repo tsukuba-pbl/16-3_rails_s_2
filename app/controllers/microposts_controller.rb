@@ -5,6 +5,10 @@ class MicropostsController < ApplicationController
   # GET /microposts.json
   def index
     @microposts = Micropost.all
+    if params[:uzser_id]
+      @microposts = Micropost.where(uzser_id: params[:uzser_id])
+    end
+      
   end
 
   # GET /microposts/1
@@ -15,6 +19,10 @@ class MicropostsController < ApplicationController
   # GET /microposts/new
   def new
     @micropost = Micropost.new
+    if params[:uzser_id]
+      @micropost.uzser_id = params[:uzser_id]
+    end
+    
   end
 
   # GET /microposts/1/edit
