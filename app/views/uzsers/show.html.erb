@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Uzser id:<%= @uzser.id %></h1>
 <p>
   <strong>Name:</strong>
   <%= @uzser.name %>
@@ -14,6 +15,11 @@
   <strong>Name3:</strong>
   <%= @uzser.name3 %>
 </p>
+
+<p><%= link_to 'add a micropost to this uzser', add_micropost_get_uzser_path(@uzser) %></p>
+<h3>microposts</h3>
+<% @microposts = @uzser.microposts %>
+<%= render @microposts %>
 
 <%= link_to 'Edit', edit_uzser_path(@uzser) %> |
 <%= link_to 'Back', uzsers_path %>

@@ -1,11 +1,22 @@
 class UzsersController < ApplicationController
-  before_action :set_uzser, only: [:show, :edit, :update, :destroy]
+  before_action :set_uzser, only: [:show, :edit, :update, :destroy, :add_micropost_get]
+  
+  def add_micropost_get
+    @msg = "wwwwwwwwwwwww"
+    @micropost = @uzser.microposts.build
+  end
+  
+  def add_micropost_post
+    micropost_params = params.require(:micropost).permit(:content, :uzser_id)
+    @micropost = Micropost.new(micropost_params)
+    @micropost.save
+    redirect_to @micropost.uzser
+  end
 
   # GET /uzsers
   # GET /uzsers.json
   def index
     @uzsers = Uzser.all
-    @msg = "aaaaaaaasssssssssss"
   end
 
   # GET /uzsers/1
@@ -62,26 +73,12 @@ class UzsersController < ApplicationController
     end
   end
   
-  def 
-  
-  def add_micropost_get
-    @msg = "aaaaaaaasssssssssss"
-    @uzser = Uzser.find(8888)
-    @msg="aaaasss"
-    huhi.yh
-  end
-  
-  def add_micropost_post
-    micropost_params = params.require(:micropost).permit(:content, :uzser_id)
-    @micropost = Micropost.new(micropost_params)
-    @micropost.save
-    redirect_to @micropost.uzser
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_uzser
       @uzser = Uzser.find(params[:id])
+      @microposts = @uzser.microposts
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
