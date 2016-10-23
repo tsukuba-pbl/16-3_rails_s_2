@@ -1,4 +1,9 @@
 == README
+動作
+https://salty-fortress-26407.herokuapp.com/uxsers
+https://salty-fortress-26407.herokuapp.com/uxsers
+https://salty-fortress-26407.herokuapp.com/uzsers
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
