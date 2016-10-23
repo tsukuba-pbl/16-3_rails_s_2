@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :uzsers do
     resources :microposts
+    member do
+      get "add_micropost_get"
+    end
+    collection do
+      post "add_micropost_post"
+    end
   end
   resources :microposts
   resources :uxsers

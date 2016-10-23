@@ -5,6 +5,7 @@ class UzsersController < ApplicationController
   # GET /uzsers.json
   def index
     @uzsers = Uzser.all
+    @msg = "aaaaaaaasssssssssss"
   end
 
   # GET /uzsers/1
@@ -59,6 +60,22 @@ class UzsersController < ApplicationController
       format.html { redirect_to uzsers_url, notice: 'Uzser was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def 
+  
+  def add_micropost_get
+    @msg = "aaaaaaaasssssssssss"
+    @uzser = Uzser.find(8888)
+    @msg="aaaasss"
+    huhi.yh
+  end
+  
+  def add_micropost_post
+    micropost_params = params.require(:micropost).permit(:content, :uzser_id)
+    @micropost = Micropost.new(micropost_params)
+    @micropost.save
+    redirect_to @micropost.uzser
   end
 
   private
