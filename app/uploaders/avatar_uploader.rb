@@ -8,8 +8,20 @@ class AvatarUploader < CarrierWave::Uploader::Base
  
   process :tags => ['avatar']
 
-  version :standard do
-   
+  version :resize_to_fit_300_300 do
+   process :resize_to_fit => [300, 300]
+  end
+  
+  version :resize_to_fill_300_300 do
+   process :resize_to_fill => [300, 300]
+  end
+  
+  version :resize_to_fit_300_100 do
+   process :resize_to_fit => [300, 100]
+  end
+  
+  version :resize_to_fill_300_100 do
+   process :resize_to_fill => [300, 100]
   end
 
   version :thumbnail do
