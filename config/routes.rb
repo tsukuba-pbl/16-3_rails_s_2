@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount API::Base => '/'
+  mount MediaSite::API => '/'
   resources :uzsers do
     resources :microposts
     member do
