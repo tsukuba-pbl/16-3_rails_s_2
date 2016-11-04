@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   mount MediaSite::API => '/'
+  mount GrapeSwaggerRails::Engine => '/docs'
   resources :uzsers do
     resources :microposts
     member do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021045427) do
+ActiveRecord::Schema.define(version: 20161104165410) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20161021045427) do
     t.string   "avatar_cache"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.float    "zahyo_x"
+    t.float    "zahyo_y"
+    t.float    "zahyo_z"
+    t.float    "offset"
   end
 
   create_table "uzsers", force: :cascade do |t|

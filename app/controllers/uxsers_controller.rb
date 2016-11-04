@@ -69,6 +69,6 @@ class UxsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def uxser_params
-      params.require(:uxser).permit(:name, :avatar, :remove_avatar, :avatar_cache)
+      params.require(:uxser).permit(:name, :avatar, :remove_avatar, :avatar_cache, :zahyo_x, :zahyo_y, :zahyo_z, :offset)
     end
 end
