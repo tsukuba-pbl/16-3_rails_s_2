@@ -14,6 +14,7 @@ gem "carrierwave"
 gem 'cloudinary'
 gem 'grape'
 gem 'grape-jbuilder'
+gem 'hashie-forbidden_attributes'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

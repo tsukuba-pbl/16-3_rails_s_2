@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount API::Base => '/'
   resources :uzsers do
     resources :microposts
     member do
