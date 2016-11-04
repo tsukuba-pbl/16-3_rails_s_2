@@ -15,6 +15,7 @@ gem 'cloudinary'
 gem 'grape'
 gem 'grape-jbuilder'
 gem 'hashie-forbidden_attributes'
+gem 'grape-entity'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

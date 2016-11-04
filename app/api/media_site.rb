@@ -4,11 +4,16 @@ module MediaSite
     format :json
     prefix :api
     
+  class ArticleEntiry < Grape::Entity
+    expose :id
+    expose :created_at
+  end
+    
     resource :articles do
       # descには説明を書く
       desc 'Return public articles.'
       get :public do
-        Micropost.all
+        present Micropost.all , with: ArticleEntiry
       end
     end
     
