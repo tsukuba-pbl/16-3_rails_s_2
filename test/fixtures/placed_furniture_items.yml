@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  layout_id: 
+  furniture_item_id: 
+  x_coordinate_data: 1.5
+  y_coordinate_data: 1.5
+  z_coordinate_data: 1.5
+  a_rotation: 1.5
+  b_rotation: 1.5
+  c_rotation: 1.5
+
+two:
+  layout_id: 
+  furniture_item_id: 
+  x_coordinate_data: 1.5
+  y_coordinate_data: 1.5
+  z_coordinate_data: 1.5
+  a_rotation: 1.5
+  b_rotation: 1.5
+  c_rotation: 1.5

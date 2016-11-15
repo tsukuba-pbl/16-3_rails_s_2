@@ -1,0 +1,49 @@
+<%= form_for(@placed_furniture_item) do |f| %>
+  <% if @placed_furniture_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@placed_furniture_item.errors.count, "error") %> prohibited this placed_furniture_item from being saved:</h2>
+
+      <ul>
+      <% @placed_furniture_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :layout_id %><br>
+    <%= f.text_field :layout_id %>
+  </div>
+  <div class="field">
+    <%= f.label :furniture_item_id %><br>
+    <%= f.text_field :furniture_item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :x_coordinate_data %><br>
+    <%= f.text_field :x_coordinate_data %>
+  </div>
+  <div class="field">
+    <%= f.label :y_coordinate_data %><br>
+    <%= f.text_field :y_coordinate_data %>
+  </div>
+  <div class="field">
+    <%= f.label :z_coordinate_data %><br>
+    <%= f.text_field :z_coordinate_data %>
+  </div>
+  <div class="field">
+    <%= f.label :a_rotation %><br>
+    <%= f.text_field :a_rotation %>
+  </div>
+  <div class="field">
+    <%= f.label :b_rotation %><br>
+    <%= f.text_field :b_rotation %>
+  </div>
+  <div class="field">
+    <%= f.label :c_rotation %><br>
+    <%= f.text_field :c_rotation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

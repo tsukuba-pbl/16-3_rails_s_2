@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :placed_furniture_items
+  resources :furniture_items
+  resources :layouts
   mount MediaSite::API => '/'
   mount GrapeSwaggerRails::Engine => '/docs'
   resources :uzsers do

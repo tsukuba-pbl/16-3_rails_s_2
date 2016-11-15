@@ -1,0 +1,2 @@
+json.extract! placed_furniture_item, :id, :layout_id, :furniture_item_id, :x_coordinate_data, :y_coordinate_data, :z_coordinate_data, :a_rotation, :b_rotation, :c_rotation, :created_at, :updated_at
+json.url placed_furniture_item_url(placed_furniture_item, format: :json)

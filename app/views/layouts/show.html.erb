@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nanika:</strong>
+  <%= @layout.nanika %>
+</p>
+
+<p>
+  <strong>Hoge:</strong>
+  <%= @layout.hoge %>
+</p>
+
+
+
+<br>44444444444
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Layout</th>
+      <th>Furniture item</th>
+      <th>X coordinate data</th>
+      <th>Y coordinate data</th>
+      <th>Z coordinate data</th>
+      <th>A rotation</th>
+      <th>B rotation</th>
+      <th>C rotation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @layout.placed_furniture_item.each do |placed_furniture_item| %>
+      <tr>
+        <td><%= placed_furniture_item.layout %></td>
+        <td><%= placed_furniture_item.furniture_item %></td>
+        <td><%= placed_furniture_item.x_coordinate_data %></td>
+        <td><%= placed_furniture_item.y_coordinate_data %></td>
+        <td><%= placed_furniture_item.z_coordinate_data %></td>
+        <td><%= placed_furniture_item.a_rotation %></td>
+        <td><%= placed_furniture_item.b_rotation %></td>
+        <td><%= placed_furniture_item.c_rotation %></td>
+        <td><%= link_to 'Show', placed_furniture_item %></td>
+        <td><%= link_to 'Edit', edit_placed_furniture_item_path(placed_furniture_item) %></td>
+        <td><%= link_to 'Destroy', placed_furniture_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_layout_path(@layout) %> |
+<%= link_to 'Back', layouts_path %>

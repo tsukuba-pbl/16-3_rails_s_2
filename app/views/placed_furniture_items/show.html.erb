@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Layout:</strong>
+  <%= @placed_furniture_item.layout %>
+</p>
+
+<p>
+  <strong>Furniture item:</strong>
+  <%= @placed_furniture_item.furniture_item %>
+</p>
+
+<p>
+  <strong>X coordinate data:</strong>
+  <%= @placed_furniture_item.x_coordinate_data %>
+</p>
+
+<p>
+  <strong>Y coordinate data:</strong>
+  <%= @placed_furniture_item.y_coordinate_data %>
+</p>
+
+<p>
+  <strong>Z coordinate data:</strong>
+  <%= @placed_furniture_item.z_coordinate_data %>
+</p>
+
+<p>
+  <strong>A rotation:</strong>
+  <%= @placed_furniture_item.a_rotation %>
+</p>
+
+<p>
+  <strong>B rotation:</strong>
+  <%= @placed_furniture_item.b_rotation %>
+</p>
+
+<p>
+  <strong>C rotation:</strong>
+  <%= @placed_furniture_item.c_rotation %>
+</p>
+
+<%= link_to 'Edit', edit_placed_furniture_item_path(@placed_furniture_item) %> |
+<%= link_to 'Back', placed_furniture_items_path %>

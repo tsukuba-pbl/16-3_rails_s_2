@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104165410) do
+ActiveRecord::Schema.define(version: 20161115013122) do
+
+  create_table "furniture_items", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "layouts", force: :cascade do |t|
+    t.string   "nanika"
+    t.string   "hoge"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -21,6 +33,22 @@ ActiveRecord::Schema.define(version: 20161104165410) do
   end
 
   add_index "microposts", ["uzser_id"], name: "index_microposts_on_uzser_id"
+
+  create_table "placed_furniture_items", force: :cascade do |t|
+    t.integer  "layout_id"
+    t.integer  "furniture_item_id"
+    t.float    "x_coordinate_data"
+    t.float    "y_coordinate_data"
+    t.float    "z_coordinate_data"
+    t.float    "a_rotation"
+    t.float    "b_rotation"
+    t.float    "c_rotation"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "placed_furniture_items", ["furniture_item_id"], name: "index_placed_furniture_items_on_furniture_item_id"
+  add_index "placed_furniture_items", ["layout_id"], name: "index_placed_furniture_items_on_layout_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"

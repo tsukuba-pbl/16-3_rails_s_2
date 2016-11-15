@@ -1,0 +1,25 @@
+<%= form_for(@layout) do |f| %>
+  <% if @layout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@layout.errors.count, "error") %> prohibited this layout from being saved:</h2>
+
+      <ul>
+      <% @layout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nanika %><br>
+    <%= f.text_field :nanika %>
+  </div>
+  <div class="field">
+    <%= f.label :hoge %><br>
+    <%= f.text_field :hoge %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

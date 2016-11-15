@@ -1,0 +1,1 @@
+json.partial! "placed_furniture_items/placed_furniture_item", placed_furniture_item: @placed_furniture_item

@@ -1,0 +1,2 @@
+module PlacedFurnitureItemsHelper
+end

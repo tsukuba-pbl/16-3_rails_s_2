@@ -1,0 +1,1 @@
+json.array! @placed_furniture_items, partial: 'placed_furniture_items/placed_furniture_item', as: :placed_furniture_item
