@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :placed_furniture_items
   resources :furniture_items
-  resources :layouts
+  resources :layouts do
+    member do
+      get "add_furniture_item"
+    end
+  end
   mount MediaSite::API => '/'
   mount GrapeSwaggerRails::Engine => '/docs'
   resources :uzsers do

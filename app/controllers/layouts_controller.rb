@@ -1,5 +1,5 @@
 class LayoutsController < ApplicationController
-  before_action :set_layout, only: [:show, :edit, :update, :destroy]
+  before_action :set_layout, only: [:show, :edit, :update, :destroy, :add_furniture_item]
 
   # GET /layouts
   # GET /layouts.json
@@ -59,6 +59,10 @@ class LayoutsController < ApplicationController
       format.html { redirect_to layouts_url, notice: 'Layout was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def add_furniture_item
+    @placed_furniture_item = @layout.placed_furniture_item.build
   end
 
   private
