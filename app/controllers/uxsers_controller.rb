@@ -60,6 +60,10 @@ class UxsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def hoge
+    @hoge = "@@@@@@@@@@@@@@"
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

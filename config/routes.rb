@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :uxsers
   resources :posts
   root :to => 'posts#index'
+  get 'uxser/hoge', to: 'uxsers#hoge'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
