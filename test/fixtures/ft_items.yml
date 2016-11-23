@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: 1
+  top: 1.5
+  left: 1.5
+  ft_layout_id: 
+
+two:
+  item_id: 1
+  top: 1.5
+  left: 1.5
+  ft_layout_id: 

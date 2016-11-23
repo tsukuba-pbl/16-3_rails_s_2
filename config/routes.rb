@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ft_items
+  resources :ft_layouts
   resources :placed_furniture_items
   resources :furniture_items
   resources :layouts do
@@ -7,7 +9,6 @@ Rails.application.routes.draw do
     end
   end
   mount MediaSite::API => '/'
-  mount GrapeSwaggerRails::Engine => '/docs'
   resources :uzsers do
     resources :microposts
     member do

@@ -1,0 +1,1 @@
+json.partial! "ft_layouts/ft_layout", ft_layout: @ft_layout

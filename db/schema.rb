@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115013122) do
+ActiveRecord::Schema.define(version: 20161123132619) do
+
+  create_table "ft_items", force: :cascade do |t|
+    t.integer  "item_id"
+    t.float    "top"
+    t.float    "left"
+    t.integer  "ft_layout_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.float    "deg"
+  end
+
+  add_index "ft_items", ["ft_layout_id"], name: "index_ft_items_on_ft_layout_id"
+
+  create_table "ft_layouts", force: :cascade do |t|
+    t.string   "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "furniture_items", force: :cascade do |t|
     t.datetime "created_at", null: false

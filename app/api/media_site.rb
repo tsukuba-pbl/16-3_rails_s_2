@@ -15,15 +15,26 @@ module MediaSite
       get :public do
         present Micropost.all , with: ArticleEntiry
       end
+      
+      desc 'c user'
+      params  do
+        requires :room_id ,type: String, desc: 'user n'
+        requires :layout ,type: Array do
+          optional :id, type: String
+          optional :left, type: Float
+          optional :top, type: Float
+          optional :deg, type: Float
+        end
+      end
+      post "aasx" do
+        mm = FtLayout.create({:room_id => params[:room_id]})
+        aa = params[:layout]
+        aa.each do |layout|
+          mm.ft_item.create({:item_id => layout[:id],:top => layout[:top] ,:left => layout[:left],:deg => layout[:deg]})
+        end
+        p params
+        mm.id
+      end
     end
-    add_swagger_documentation(
-      api_version: "v1",
-      base_path: "#{ENV['API_BASE_PATH']}",
-      hide_documentation_path: true,
-      info: {
-        title: "APIドキュメント",
-        description: "説明です。"
-      }
-    )
   end
 end

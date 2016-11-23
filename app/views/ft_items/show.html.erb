@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @ft_item.item_id %>
+</p>
+
+<p>
+  <strong>Top:</strong>
+  <%= @ft_item.top %>
+</p>
+
+<p>
+  <strong>Left:</strong>
+  <%= @ft_item.left %>
+</p>
+
+<p>
+  <strong>Ft layout:</strong>
+  <%= @ft_item.ft_layout %>
+</p>
+
+<%= link_to 'Edit', edit_ft_item_path(@ft_item) %> |
+<%= link_to 'Back', ft_items_path %>

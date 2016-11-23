@@ -1,0 +1,2 @@
+module FtItemsHelper
+end

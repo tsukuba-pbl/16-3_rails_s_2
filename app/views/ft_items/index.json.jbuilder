@@ -1,0 +1,1 @@
+json.array! @ft_items, partial: 'ft_items/ft_item', as: :ft_item

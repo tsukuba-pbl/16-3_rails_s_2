@@ -1,0 +1,1 @@
+json.array! @ft_layouts, partial: 'ft_layouts/ft_layout', as: :ft_layout

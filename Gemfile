@@ -16,10 +16,7 @@ gem 'grape'
 gem 'grape-jbuilder'
 gem 'hashie-forbidden_attributes'
 gem 'grape-entity'
-gem 'grape-swagger'
-gem 'grape-swagger-entity'
-gem 'grape-swagger-rails'
-gem 'grape-swagger-representable'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

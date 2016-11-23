@@ -1,0 +1,1 @@
+json.partial! "ft_items/ft_item", ft_item: @ft_item
