@@ -9,12 +9,31 @@ module MediaSite
       expose :created_at
     end
     
+    
     resource :articles do
       # descには説明を書く
       desc 'Return public articles.',entity: ArticleEntiry
       get :public do
         present Micropost.all , with: ArticleEntiry
       end
+      
+      desc 'Return public articles.'
+      params do
+        requires :room_id
+      end
+      post "abc" do
+        1111
+      end
+      
+      desc 'Re'
+      params do
+        optional :room_id
+      end
+      post "cccbbaa" do
+        1111
+      end
+      
+
       
       desc 'c user'
       params  do
@@ -35,6 +54,8 @@ module MediaSite
         p params
         mm.id
       end
+      
+
     end
   end
 end
