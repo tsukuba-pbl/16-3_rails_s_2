@@ -24,6 +24,7 @@ module MediaSite
       end
       post "abc" do
         header 'Access-Control-Allow-Origin', '*'
+        header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         1111
       end
       
@@ -33,6 +34,7 @@ module MediaSite
       end
       post "cccbbaa" do
         header 'Access-Control-Allow-Origin', '*'
+        header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         1111
       end
       
@@ -42,6 +44,7 @@ module MediaSite
       end
       post "zzzzz" do
         header 'Access-Control-Allow-Origin', 'http://localhost'
+        header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         1111
       end
       
@@ -59,6 +62,7 @@ module MediaSite
       end
       post "aasx" do
         header 'Access-Control-Allow-Origin', '*'
+        header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         mm = FtLayout.create({:room_id => params[:room_id]})
         aa = params[:layout]
         aa.each do |layout|
