@@ -51,6 +51,18 @@ module MediaSite
         1111
       end
       
+     desc 'Re'
+      params do
+        optional :room_id
+      end
+      post "aaaaa" do
+        header 'Access-Control-Allow-Origin', '*'
+        header 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'
+        1111
+      end
+      
+      
+      
 
       
       desc 'c user'
@@ -65,8 +77,7 @@ module MediaSite
       end
       post "aasx" do
         header 'Access-Control-Allow-Origin', '*'
-        header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
-        header 'Access-Control-Allow-Credentials', 'true'
+        header 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'
         mm = FtLayout.create({:room_id => params[:room_id]})
         aa = params[:layout]
         aa.each do |layout|
