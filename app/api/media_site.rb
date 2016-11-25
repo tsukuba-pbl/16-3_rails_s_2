@@ -14,6 +14,7 @@ module MediaSite
       # descには説明を書く
       desc 'Return public articles.',entity: ArticleEntiry
       get :public do
+        header 'Access-Control-Allow-Origin', '*'
         present Micropost.all , with: ArticleEntiry
       end
       
@@ -22,6 +23,7 @@ module MediaSite
         requires :room_id
       end
       post "abc" do
+        header 'Access-Control-Allow-Origin', '*'
         1111
       end
       
@@ -30,6 +32,7 @@ module MediaSite
         optional :room_id
       end
       post "cccbbaa" do
+        header 'Access-Control-Allow-Origin', '*'
         1111
       end
       
@@ -46,6 +49,7 @@ module MediaSite
         end
       end
       post "aasx" do
+        header 'Access-Control-Allow-Origin', '*'
         mm = FtLayout.create({:room_id => params[:room_id]})
         aa = params[:layout]
         aa.each do |layout|
