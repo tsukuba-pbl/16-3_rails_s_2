@@ -36,6 +36,15 @@ module MediaSite
         1111
       end
       
+      desc 'Re'
+      params do
+        optional :room_id
+      end
+      post "zzzzz" do
+        header 'Access-Control-Allow-Origin', 'http://localhost'
+        1111
+      end
+      
 
       
       desc 'c user'
