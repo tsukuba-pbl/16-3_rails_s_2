@@ -26,6 +26,7 @@ module MediaSite
         header 'Access-Control-Allow-Origin', '*'
         header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         header 'Access-Control-Allow-Credentials', 'true'
+        
         1111
       end
       
@@ -37,6 +38,7 @@ module MediaSite
         header 'Access-Control-Allow-Origin', '*'
         header 'Access-Control-Allow-Methods', 'GET,POST,HEAD,OPTIONS'
         header 'Access-Control-Allow-Credentials', 'true'
+        header 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'
         1111
       end
       
