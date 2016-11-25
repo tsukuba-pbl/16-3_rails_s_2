@@ -16,6 +16,7 @@ gem 'grape'
 gem 'grape-jbuilder'
 gem 'hashie-forbidden_attributes'
 gem 'grape-entity'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'sqlite3'
