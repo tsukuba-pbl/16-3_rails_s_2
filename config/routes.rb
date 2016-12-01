@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :ft_items
-  resources :ft_layouts
+  resources :ft_layouts do
+    collection do
+      get "last"
+    end
+  end
   resources :placed_furniture_items
   resources :furniture_items
   resources :layouts do

@@ -1,5 +1,9 @@
-json.extract! ft_layout, :id, :room_id, :created_at, :updated_at
-json.layout(ft_layout.ft_item) do |ft_item|
-  json.extract! ft_item, :item_id, :top, :left, :deg
+json.contents do
+  json.layout_id ft_layout.id
+  json.placed_furniture_items(ft_layout.ft_item) do |ft_item|
+    json.furniture_item_id ft_item.item_id
+    json.top ft_item.top
+    json.left ft_item.left
+    json.deg ft_item.deg
+  end
 end
-json.url ft_layout_url(ft_layout, format: :json)

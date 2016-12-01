@@ -60,6 +60,11 @@ class FtLayoutsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def last
+    @ft_layout = (FtLayout.order(created_at: :desc))[0]
+    render 'show'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -4,6 +4,36 @@
   <strong>Room:</strong>
   <%= @ft_layout.room_id %>
 </p>
+<br>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Top</th>
+      <th>Left</th>
+      <th>Deg</th>
+      <th>Ft layout id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ft_layout.ft_item.each do |ft_item| %>
+      <tr>
+        <td><%= ft_item.item_id %></td>
+        <td><%= ft_item.top %></td>
+        <td><%= ft_item.left %></td>
+        <td><%= ft_item.deg %></td>
+        <td><%= ft_item.ft_layout.id %></td>
+        <td><%= link_to 'Show', ft_item %></td>
+        <td><%= link_to 'Edit', edit_ft_item_path(ft_item) %></td>
+        <td><%= link_to 'Destroy', ft_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
 
 <%= link_to 'Edit', edit_ft_layout_path(@ft_layout) %> |
 <%= link_to 'Back', ft_layouts_path %>
