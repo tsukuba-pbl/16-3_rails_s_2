@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tarots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tarots.each do |tarot| %>
+      <tr>
+        <td><%= tarot.name %></td>
+        <td><%= tarot.content %></td>
+        <td><%= link_to 'Show', tarot %></td>
+        <td><%= link_to 'Edit', edit_tarot_path(tarot) %></td>
+        <td><%= link_to 'Destroy', tarot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarot', new_tarot_path %>

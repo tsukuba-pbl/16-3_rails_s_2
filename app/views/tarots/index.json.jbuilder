@@ -1,0 +1,1 @@
+json.array! @tarots, partial: 'tarots/tarot', as: :tarot
