@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123132619) do
+ActiveRecord::Schema.define(version: 20161202132838) do
 
   create_table "ft_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -74,6 +74,14 @@ ActiveRecord::Schema.define(version: 20161123132619) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+  end
+
+  create_table "tarots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "content2"
   end
 
   create_table "uxsers", force: :cascade do |t|
