@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>Listing Uxsers</h1>
+<h1>写真管理画面</h1>
 
 <table BORDER="1" CELLSPACING="0" CELLPADDING="0">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Image_url</th>
-      <th>Thumbnail</th>
+      <th>物件名</th>
+      <th>URL</th>
+      <th>サムネイル</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,9 +19,9 @@
         <td><%= uxser.name %></td>
         <td><%= uxser.avatar %></td>
         <td><%= image_tag(uxser.avatar_url(:thumbnail)) %></td>
-        <td><%= link_to 'Show', uxser %></td>
-        <td><%= link_to 'Edit', edit_uxser_path(uxser) %></td>
-        <td><%= link_to 'Destroy', uxser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '表示', uxser %></td>
+        <td><%= link_to '編集', edit_uxser_path(uxser) %></td>
+        <td><%= link_to '削除', uxser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Uxser', new_uxser_path %>
+<%= link_to '新規登録', new_uxser_path %>

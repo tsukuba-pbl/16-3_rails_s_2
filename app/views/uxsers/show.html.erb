@@ -1,49 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>物件名</strong>
   <%= @uxser.name %>
 </p>
 
 <p>
-  <strong>Avatar:</strong>
+  <strong>画像</strong>
   <%= @uxser.avatar %>
 </p>
-
 <p>
-  <b>Avatar: :resize_to_fit_300_300</b>
-  <%= image_tag(@uxser.avatar_url(:resize_to_fit_300_300)) %>
-</p>
-
-<p>
-  <b>Avatar: :resize_to_fill_300_300</b>
-  <%= image_tag(@uxser.avatar_url(:resize_to_fill_300_300)) %>
-</p>
-
-<p>
-  <b>Avatar: :resize_to_fit_300_100</b>
-  <%= image_tag(@uxser.avatar_url(:resize_to_fit_300_100)) %>
-</p>
-
-<p>
-  <b>Avatar: :resize_to_fill_300_100</b>
-  <%= image_tag(@uxser.avatar_url(:resize_to_fill_300_100)) %>
-</p>
-
-<p>
-  <b>Avatar:</b>
+  <b>URL</b>
   <%= image_tag(@uxser.avatar_url) %>
 </p>
 
-<p>
-  <strong>Remove avatar:</strong>
-  <%= @uxser.remove_avatar %>
-</p>
-
-<p>
-  <strong>Avatar cache:</strong>
-  <%= @uxser.avatar_cache %>
-</p>
-
-<%= link_to 'Edit', edit_uxser_path(@uxser) %> |
-<%= link_to 'Back', uxsers_path %>
+<%= link_to '編集', edit_uxser_path(@uxser) %> |
+<%= link_to '一覧へ戻る', uxsers_path %>
