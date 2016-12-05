@@ -1,0 +1,1 @@
+json.partial! "tarots/tarot", tarot: @tarot
