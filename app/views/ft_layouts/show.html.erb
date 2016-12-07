@@ -12,6 +12,7 @@
       <th>Top</th>
       <th>Left</th>
       <th>Deg</th>
+      <th>Created</th>
       <th>Ft layout id</th>
       <th colspan="3"></th>
     </tr>
@@ -25,6 +26,7 @@
         <td><%= ft_item.left %></td>
         <td><%= ft_item.deg %></td>
         <td><%= ft_item.ft_layout.id %></td>
+        <td><%= ft_item.created_at %></td>
         <td><%= link_to 'Show', ft_item %></td>
         <td><%= link_to 'Edit', edit_ft_item_path(ft_item) %></td>
         <td><%= link_to 'Destroy', ft_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
