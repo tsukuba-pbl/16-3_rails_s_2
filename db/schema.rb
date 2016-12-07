@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202132838) do
+ActiveRecord::Schema.define(version: 20161207141838) do
 
   create_table "ft_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -95,6 +95,8 @@ ActiveRecord::Schema.define(version: 20161202132838) do
     t.float    "zahyo_y"
     t.float    "zahyo_z"
     t.float    "offset"
+    t.float    "room_depth"
+    t.float    "room_width"
   end
 
   create_table "uzsers", force: :cascade do |t|
