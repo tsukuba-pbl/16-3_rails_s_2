@@ -4,6 +4,7 @@ json.contents do
     json.furniture_item_id ft_item.item_id
     json.top ft_item.top
     json.left ft_item.left
-    json.deg ft_item.deg
+    hoge = ft_item.deg || 0
+    json.deg hoge
   end
 end
