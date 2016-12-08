@@ -16,35 +16,35 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :avatar %><br>
+    <%= f.label "写真変更" %><br>
     <%= f.file_field :avatar %>
   </div>
   <div class="field">
-    <%= f.label :remove_avatar %><br>
+    <%= f.label "写真を削除する" %><br>
     <%= f.check_box :remove_avatar %>
   </div>
   <div class="field">
-    <%= f.label :avatar_cache %><br>
+    <%= f.label "写真のURL" %><br>
     <%= f.text_field :avatar_cache %>
   </div>
   
   <div class="field">
-    <%= f.label :zahyo_x %><br>
+    <%= f.label "撮影点のx座標" %><br>
     <%= f.text_field :zahyo_x %>
   </div>
   
   <div class="field">
-    <%= f.label :zahyo_y %><br>
+    <%= f.label "撮影点のy座標" %><br>
     <%= f.text_field :zahyo_y %>
   </div>
   
   <div class="field">
-    <%= f.label :zahyo_z %><br>
+    <%= f.label "撮影点の高さ" %><br>
     <%= f.text_field :zahyo_z %>
   </div>
   
   <div class="field">
-    <%= f.label :offset %><br>
+    <%= f.label "なんだこれ" %><br>
     <%= f.text_field :offset %>
   </div>
   
@@ -58,6 +58,6 @@
     <%= f.text_field :room_width %>
   </div>
   <div class="actions">
-    <%= f.submit "文字文字文字"%>
+    <%= f.submit "完了"%>
   </div>
 <% end %>
