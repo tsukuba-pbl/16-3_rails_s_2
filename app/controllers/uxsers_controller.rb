@@ -28,7 +28,7 @@ class UxsersController < ApplicationController
 
     respond_to do |format|
       if @uxser.save
-        format.html { redirect_to @uxser, notice: 'Uxser was successfully created.' }
+        format.html { redirect_to @uxser, notice: '登録しました' }
         format.json { render :show, status: :created, location: @uxser }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class UxsersController < ApplicationController
   def update
     respond_to do |format|
       if @uxser.update(uxser_params)
-        format.html { redirect_to @uxser, notice: 'Uxser was successfully updated.' }
+        format.html { redirect_to @uxser, notice: '更新しました' }
         format.json { render :show, status: :ok, location: @uxser }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class UxsersController < ApplicationController
   def destroy
     @uxser.destroy
     respond_to do |format|
-      format.html { redirect_to uxsers_url, notice: 'Uxser was successfully destroyed.' }
+      format.html { redirect_to uxsers_url, notice: '削除しました' }
       format.json { head :no_content }
     end
   end
