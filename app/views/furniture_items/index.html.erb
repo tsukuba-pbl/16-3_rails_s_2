@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>id</th>
       <th>width</th>
       <th>height</th>
       <th>icon</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @furniture_items.each do |furniture_item| %>
       <tr>
+        <td><%= furniture_item.id %></td>
         <td><%= furniture_item.width %></td>
         <td><%= furniture_item.height %></td>
         <td><%= image_tag(furniture_item.icon_url(:thumbnail2)) %></td>
