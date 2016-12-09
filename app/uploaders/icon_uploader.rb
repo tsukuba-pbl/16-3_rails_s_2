@@ -1,12 +1,11 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base
+class IconUploader < CarrierWave::Uploader::Base
 
   include Cloudinary::CarrierWave
 
  
-  process :tags => ['image']
-
+  process :tags => ['icon']
 
   version :thumbnail do
     process :resize_to_fit => [50, 50]
@@ -15,4 +14,5 @@ class ImageUploader < CarrierWave::Uploader::Base
   def public_id
     return model.id
   end
+
 end

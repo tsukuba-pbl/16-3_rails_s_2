@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207141838) do
+ActiveRecord::Schema.define(version: 20161209073839) do
 
   create_table "ft_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -32,8 +32,14 @@ ActiveRecord::Schema.define(version: 20161207141838) do
   end
 
   create_table "furniture_items", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "image"
+    t.boolean  "remove_image"
+    t.string   "image_cache"
+    t.string   "icon"
+    t.boolean  "remove_icon"
+    t.string   "icon_cache"
   end
 
   create_table "layouts", force: :cascade do |t|

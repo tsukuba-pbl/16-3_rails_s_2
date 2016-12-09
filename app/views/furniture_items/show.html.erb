@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>URL</b>
+  <%= image_tag(@furniture_item.icon_url) %>
+</p>
+
+<p>
+  <b>URL</b>
+  <%= image_tag(@furniture_item.image_url) %>
+</p>
+
 <%= link_to 'Edit', edit_furniture_item_path(@furniture_item) %> |
 <%= link_to 'Back', furniture_items_path %>
