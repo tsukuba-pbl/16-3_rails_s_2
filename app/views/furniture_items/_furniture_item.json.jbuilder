@@ -1,2 +1,3 @@
-json.extract! furniture_item, :id, :created_at, :updated_at
-json.url furniture_item_url(furniture_item, format: :json)
+json.extract! furniture_item, :id, :width, :height
+json.icon_url furniture_item.icon_url
+json.image_url furniture_item.image_url
