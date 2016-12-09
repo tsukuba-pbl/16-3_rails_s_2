@@ -12,12 +12,12 @@
 
 <p>
   <b>URL</b>
-  <%= image_tag(@furniture_item.icon_url) %>
+  <%= image_tag(@furniture_item.icon_url(:thumbnail2)) %>
 </p>
 
 <p>
   <b>URL</b>
-  <%= image_tag(@furniture_item.image_url) %>
+  <%= image_tag(@furniture_item.image_url(:thumbnail)) %>
 </p>
 
 <%= link_to 'Edit', edit_furniture_item_path(@furniture_item) %> |

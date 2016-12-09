@@ -7,12 +7,12 @@ class IconUploader < CarrierWave::Uploader::Base
  
   process :tags => ['icon']
 
-  version :thumbnail do
+  version :thumbnail2 do
     process :resize_to_fit => [50, 50]
   end
 
   def public_id
-    return model.id
+    return model.id 
   end
 
 end

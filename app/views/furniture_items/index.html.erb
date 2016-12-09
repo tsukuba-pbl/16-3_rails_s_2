@@ -5,6 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>width</th>
+      <th>height</th>
+      <th>icon</th>
+      <th>image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +16,10 @@
   <tbody>
     <% @furniture_items.each do |furniture_item| %>
       <tr>
+        <td><%= furniture_item.width %></td>
+        <td><%= furniture_item.height %></td>
+        <td><%= image_tag(furniture_item.icon_url(:thumbnail2)) %></td>
+        <td><%= image_tag(furniture_item.image_url(:thumbnail)) %></td>
         <td><%= link_to 'Show', furniture_item %></td>
         <td><%= link_to 'Edit', edit_furniture_item_path(furniture_item) %></td>
         <td><%= link_to 'Destroy', furniture_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
