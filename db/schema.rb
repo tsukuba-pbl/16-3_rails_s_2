@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209073839) do
+ActiveRecord::Schema.define(version: 20161209082635) do
 
   create_table "ft_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20161209073839) do
     t.string   "icon"
     t.boolean  "remove_icon"
     t.string   "icon_cache"
+    t.float    "width"
+    t.float    "height"
   end
 
   create_table "layouts", force: :cascade do |t|
