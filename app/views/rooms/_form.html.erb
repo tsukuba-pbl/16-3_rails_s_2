@@ -1,0 +1,37 @@
+<%= form_for(@room) do |f| %>
+  <% if @room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+      <% @room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :width %><br>
+    <%= f.text_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :madori %><br>
+    <%= f.file_field :madori %>
+  </div>
+  <div class="field">
+    <%= f.label :remove_madori %><br>
+    <%= f.check_box :remove_madori %>
+  </div>
+  <div class="field">
+    <%= f.label :madori_cache %><br>
+    <%= f.text_field :madori_cache %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @room.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @room.height %>
+</p>
+
+<p>
+  <strong>Madori:</strong>
+  <%= @room.madori %>
+</p>
+
+<p>
+  <b>URL</b>
+  <%= image_tag(@room.madori_url) %>
+</p>
+
+<p>
+  <strong>Remove madori:</strong>
+  <%= @room.remove_madori %>
+</p>
+
+<p>
+  <strong>Madori cache:</strong>
+  <%= @room.madori_cache %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
