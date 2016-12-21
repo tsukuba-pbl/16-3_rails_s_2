@@ -1,1 +1,2 @@
-json.partial! "rooms/room", room: @room
+  json.extract! @room, :id, :width, :height
+  json.madori_url @room.madori_url
