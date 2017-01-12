@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :rooms
   resources :tarots
   resources :ft_items

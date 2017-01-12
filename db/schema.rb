@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212022943) do
+ActiveRecord::Schema.define(version: 20170112073829) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "remark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "buildings", force: :cascade do |t|
+    t.string   "name"
+    t.string   "adress"
+    t.string   "remarks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ft_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -92,6 +108,7 @@ ActiveRecord::Schema.define(version: 20161212022943) do
     t.string   "madori_cache"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "building_id"
   end
 
   create_table "tarots", force: :cascade do |t|
