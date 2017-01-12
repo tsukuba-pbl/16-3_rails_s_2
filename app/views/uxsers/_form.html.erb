@@ -12,52 +12,43 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "物件名" %><br>
+    <%= f.label "Name" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label "写真変更" %><br>
+    <%= f.label "image" %><br>
     <%= f.file_field :avatar %>
   </div>
   <div class="field">
-    <%= f.label "写真を削除する" %><br>
-    <%= f.check_box :remove_avatar %>
-  </div>
-  <div class="field">
-    <%= f.label "写真のURL" %><br>
+    <%= f.label "URL" %><br>
     <%= f.text_field :avatar_cache %>
   </div>
   
   <div class="field">
-    <%= f.label "撮影点のx座標" %><br>
+    <%= f.label "x-coordinate of the shooting point" %><br>
     <%= f.text_field :zahyo_x %>
   </div>
   
   <div class="field">
-    <%= f.label "撮影点のy座標" %><br>
+    <%= f.label "y-coordinate of the shooting point" %><br>
     <%= f.text_field :zahyo_y %>
   </div>
   
   <div class="field">
-    <%= f.label "撮影点の高さ" %><br>
+    <%= f.label "height of the shooting point" %><br>
     <%= f.text_field :zahyo_z %>
   </div>
   
   <div class="field">
-    <%= f.label "なんだこれ" %><br>
-    <%= f.text_field :offset %>
-  </div>
-  
-  <div class="field">
-    <%= f.label "部屋奥行き" %><br>
+    <%= f.label "depth of the room" %><br>
     <%= f.text_field :room_depth %>
   </div>
   
     <div class="field">
-    <%= f.label "部屋幅" %><br>
+    <%= f.label "width of the room" %><br>
     <%= f.text_field :room_width %>
   </div>
   <div class="actions">
-    <%= f.submit "完了"%>
+    <%= f.submit "Change"%>
   </div>
 <% end %>
