@@ -11,23 +11,13 @@
 </p>
 
 <p>
-  <strong>Madori:</strong>
+  <strong>URL:</strong>
   <%= @room.madori %>
 </p>
 
 <p>
-  <b>URL</b>
+  <b>Image</b>
   <%= image_tag(@room.madori_url) %>
-</p>
-
-<p>
-  <strong>Remove madori:</strong>
-  <%= @room.remove_madori %>
-</p>
-
-<p>
-  <strong>Madori cache:</strong>
-  <%= @room.madori_cache %>
 </p>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |

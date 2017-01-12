@@ -8,10 +8,8 @@
       <th>id</th>
       <th>Width</th>
       <th>Height</th>
-      <th>Madori</th>
+      <th>URL</th>
       <th>thumbnail</th>
-      <th>Remove madori</th>
-      <th>Madori cache</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,8 +22,6 @@
         <td><%= room.height %></td>
         <td><%= room.madori %></td>
         <td><%= image_tag(room.madori_url(:thumbnail)) %></td>
-        <td><%= room.remove_madori %></td>
-        <td><%= room.madori_cache %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
