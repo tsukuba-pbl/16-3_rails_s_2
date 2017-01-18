@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112075318) do
+ActiveRecord::Schema.define(version: 20170113012817) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 20170112075318) do
     t.float    "offset"
     t.float    "room_depth"
     t.float    "room_width"
+    t.integer  "room_id"
   end
 
   create_table "uzsers", force: :cascade do |t|
