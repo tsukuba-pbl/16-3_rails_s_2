@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tops
   resources :articles
   resources :rooms
   resources :tarots
