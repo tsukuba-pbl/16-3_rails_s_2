@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<h1>確認画面</h1>
 <p>
-  <strong>Width:</strong>
+  <strong>部屋の横の長さ[m]</strong>
   <%= @room.width %>
 </p>
 
 <p>
-  <strong>Height:</strong>
+  <strong>部屋の縦の長さ[m]	</strong>
   <%= @room.height %>
 </p>
 
 <p>
-  <strong>URL:</strong>
+  <strong>間取り図の画像URL</strong>
   <%= @room.madori %>
 </p>
 
 <p>
-  <b>Image</b>
+  <b>間取り図の写真</b>
   <%= image_tag(@room.madori_url) %>
 </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to '編集する', edit_room_path(@room) %> |
+<%= link_to '戻る', rooms_path %>
