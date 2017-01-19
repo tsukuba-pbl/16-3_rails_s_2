@@ -21,6 +21,18 @@ class TopsController < ApplicationController
   def edit
   end
 
+  def rooms
+  end
+
+  def articles
+  end
+
+  def furniture_items
+  end
+
+  def uxsers
+  end
+
   # POST /tops
   # POST /tops.json
   def create
