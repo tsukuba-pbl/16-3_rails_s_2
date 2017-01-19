@@ -1,30 +1,30 @@
 <p id="notice"><%= notice %></p>
-
+<h1>確認画面</h1>
 <p>
-  <strong>name</strong>
+  <strong>部屋名</strong>
   <%= @uxser.name %>
 </p>
 
 <p>
-  <strong>depth of the roon</strong>
+  <strong>部屋の縦の長さ[m]</strong>
   <%= @uxser.room_depth %>
 </p>
 
 <p>
-  <strong>width of the room</strong>
+  <strong>部屋の横の長さ[m]</strong>
   <%= @uxser.room_width %>
 </p>
 
 <p>
-  <strong>image</strong>
+  <strong>部屋の全天球写真のURL</strong>
   <%= @uxser.avatar %>
 </p>
 
 
 <p>
-  <b>URL</b>
+  <b>部屋の全天球写真</b>
   <%= image_tag(@uxser.avatar_url) %>
 </p>
 
-<%= link_to 'edit', edit_uxser_path(@uxser) %> |
-<%= link_to 'back', uxsers_path %>
+<%= link_to '編集', edit_uxser_path(@uxser) %> |
+<%= link_to '戻る', uxsers_path %>
