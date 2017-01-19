@@ -69,7 +69,7 @@ module MediaSite
       
       desc 'c user'
       params  do
-        requires :room_id ,type: String, desc: 'user n'
+        requires :room_id ,type: Integer, desc: 'user n'
         requires :layout ,type: Array do
           optional :id, type: String
           optional :left, type: Float
