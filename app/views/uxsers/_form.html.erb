@@ -12,43 +12,43 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "Name" %><br>
+    <%= f.label "部屋名" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label "image" %><br>
+    <%= f.label "部屋の全天球画像" %><br>
     <%= f.file_field :avatar %>
   </div>
   <div class="field">
-    <%= f.label "URL" %><br>
+    <%= f.label "部屋の全天球画像のURL" %><br>
     <%= f.text_field :avatar_cache %>
   </div>
   
   <div class="field">
-    <%= f.label "x-coordinate of the shooting point" %><br>
+    <%= f.label "撮影点のx座標" %><br>
     <%= f.text_field :zahyo_x %>
   </div>
   
   <div class="field">
-    <%= f.label "y-coordinate of the shooting point" %><br>
+    <%= f.label "撮影点のy座標" %><br>
     <%= f.text_field :zahyo_y %>
   </div>
   
   <div class="field">
-    <%= f.label "height of the shooting point" %><br>
+    <%= f.label "撮影点の" %><br>
     <%= f.text_field :zahyo_z %>
   </div>
   
   <div class="field">
-    <%= f.label "depth of the room" %><br>
+    <%= f.label "部屋の縦の長さ[m]" %><br>
     <%= f.text_field :room_depth %>
   </div>
   
     <div class="field">
-    <%= f.label "width of the room" %><br>
+    <%= f.label "部屋の横の長さ[m]" %><br>
     <%= f.text_field :room_width %>
   </div>
   <div class="actions">
-    <%= f.submit "Change"%>
+    <%= f.submit "保存する"%>
   </div>
 <% end %>
