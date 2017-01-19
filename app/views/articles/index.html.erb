@@ -19,9 +19,9 @@
         <td><%= article.name %></td>
         <td><%= article.address %></td>
         <td><%= article.remark %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '表示する', article %></td>
+        <td><%= link_to '編集する', edit_article_path(article) %></td>
+        <td><%= link_to '削除する', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
