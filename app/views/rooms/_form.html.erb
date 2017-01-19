@@ -12,28 +12,28 @@
   <% end %>
   
     <div class="field">
-    <%= f.label :id %><br>
+    <%= f.label :間取り図id %><br>
     <%= f.text_field :id %>
   </div>
   
   <div class="field">
-    <%= f.label "bukenid" %><br>
+    <%= f.label "物件id" %><br>
     <%= f.text_field :article_id %>
   </div>
 
   <div class="field">
-    <%= f.label :width %><br>
+    <%= f.label "部屋の横の長さ[m]" %><br>
     <%= f.text_field :width %>
   </div>
   <div class="field">
-    <%= f.label :height %><br>
+    <%= f.label "部屋の縦の長さ[m]" %><br>
     <%= f.text_field :height %>
   </div>
   <div class="field">
-    <%= f.label "image" %><br>
+    <%= f.label "間取り図の写真" %><br>
     <%= f.file_field :madori %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "保存する"%>
   </div>
 <% end %>
