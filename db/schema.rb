@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170119034803) do
     t.datetime "updated_at",   null: false
     t.float    "deg"
   end
-gi
+
   add_index "ft_items", ["ft_layout_id"], name: "index_ft_items_on_ft_layout_id"
 
   create_table "ft_layouts", force: :cascade do |t|
