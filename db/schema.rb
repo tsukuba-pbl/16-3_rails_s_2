@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113012817) do
+ActiveRecord::Schema.define(version: 20170119034803) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20170113012817) do
   add_index "ft_items", ["ft_layout_id"], name: "index_ft_items_on_ft_layout_id"
 
   create_table "ft_layouts", force: :cascade do |t|
-    t.string   "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "room_id"
   end
 
   create_table "furniture_items", force: :cascade do |t|
