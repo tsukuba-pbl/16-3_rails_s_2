@@ -12,31 +12,33 @@
   <% end %>
   
   <div class="field">
-    <%= f.label "id" %><br>
+    <%= f.label "家具id" %><br>
     <%= f.text_field :id %>
   </div>
   
   <div class="field">
-    <%= f.label "width" %><br>
+    <%= f.label "横の長さ[m]" %><br>
     <%= f.text_field :width %>
   </div>
   
   <div class="field">
-    <%= f.label "height" %><br>
+    <%= f.label "縦の長さ[m]	" %><br>
     <%= f.text_field :height %>
   </div>
   
   <div class="field">
-    <%= f.label "icon" %><br>
+    <%= f.label "真上からの写真
+(オブジェクト生成用)" %><br>
     <%= f.file_field :icon %>
   </div>
   
   <div class="field">
-    <%= f.label "image" %><br>
+    <%= f.label "全体の写真
+(家具一覧に表示する画像用)" %><br>
     <%= f.file_field :image %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "新規登録"%>
   </div>
 <% end %>

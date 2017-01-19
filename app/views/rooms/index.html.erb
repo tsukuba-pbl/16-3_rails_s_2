@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Rooms</h1>
+<h1>間取り図管理画面</h1>
 
 <table BORDER="1" CELLSPACING="0" CELLPADDING="0">
   <thead>
     <tr>
-      <th>id</th>
-      <th>Width</th>
-      <th>Height</th>
-      <th>URL</th>
-      <th>thumbnail</th>
+      <th>間取り図id</th>
+      <th>部屋の横の長さ[m]</th>
+      <th>部屋の縦の長さ[m]</th>
+      <th>間取り図の画像URL</th>
+      <th>サムネイル</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,9 +22,9 @@
         <td><%= room.height %></td>
         <td><%= room.madori %></td>
         <td><%= image_tag(room.madori_url(:thumbnail)) %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '確認する', room %></td>
+        <td><%= link_to '編集する', edit_room_path(room) %></td>
+        <td><%= link_to '削除する', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Room', new_room_path %>
+<%= link_to '新規登録', new_room_path %>

@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
-
+<h1>確認</h1>
 <p>
-  <strong>id</strong>
+  <strong>家具id</strong>
   <%= @furniture_item.id %>
 </p>
 
 <p>
-  <strong>width</strong>
+  <strong>横の長さ[m]</strong>
   <%= @furniture_item.width %>
 </p>
 
 <p>
-  <strong>height</strong>
+  <strong>縦の長さ[m]</strong>
   <%= @furniture_item.height %>
 </p>
 
 <p>
-  <b>URL</b>
+<b>真上からの写真<br>
+(オブジェクト生成用)</b>
   <%= image_tag(@furniture_item.icon_url) %>
 </p>
 
 <p>
-  <b>URL</b>
+<b>全体の写真<br>
+(家具一覧に表示する画像用)</b>
   <%= image_tag(@furniture_item.image_url) %>
 </p>
 
-<%= link_to 'Edit', edit_furniture_item_path(@furniture_item) %> |
-<%= link_to 'Back', furniture_items_path %>
+<%= link_to '編集', edit_furniture_item_path(@furniture_item) %> |
+<%= link_to '戻る', furniture_items_path %>
