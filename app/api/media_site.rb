@@ -83,7 +83,7 @@ module MediaSite
         mm = FtLayout.create({:room_id => params[:room_id]})
         aa = params[:layout]
         aa.each do |layout|
-          mm.ft_item.create({:item_id => layout[:id],:top => layout[:top] ,:left => layout[:left],:deg => layout[:deg]})
+          mm.ft_items.create({:item_id => layout[:id],:top => layout[:top] ,:left => layout[:left],:deg => layout[:deg]})
         end
         p params
         mm.id
