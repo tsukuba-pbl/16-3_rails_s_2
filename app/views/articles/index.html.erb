@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div class="page-header">
 <h1>物件管理画面</h1>
+</div>
 
-<table BORDER="1" CELLSPACING="0" CELLPADDING="0">
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>物件名</th>
@@ -19,9 +20,9 @@
         <td><%= article.name %></td>
         <td><%= article.address %></td>
         <td><%= article.remark %></td>
-        <td><%= link_to '表示する', article %></td>
-        <td><%= link_to '編集する', edit_article_path(article) %></td>
-        <td><%= link_to '削除する', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class='btn btn-default btn-xs'><%= link_to '表示する', article %></td>
+        <td class='btn btn-default btn-xs'><%= link_to '編集する', edit_article_path(article) %></td>
+        <td class='btn btn-default btn-xs'><%= link_to '削除する', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +30,6 @@
 
 <br>
 
+<div class='btn btn-default btn-xs'>
 <%= link_to '新規登録', new_article_path %>
+</div>
