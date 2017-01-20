@@ -27,5 +27,15 @@
   <%= image_tag(@furniture_item.image_url) %>
 </p>
 
+<p>
+<b>家具のよびかた</b>
+  <%= @furniture_item.name %>
+</p>
+
+<p>
+<b>そのほか家具情報</b>
+  <%= @furniture_item.biko %>
+</p>
+
 <%= link_to '編集', edit_furniture_item_path(@furniture_item) %> |
 <%= link_to '戻る', furniture_items_path %>

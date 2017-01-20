@@ -38,6 +38,16 @@
     <%= f.file_field :image %>
   </div>
 
+  <div class="field">
+    <%= f.label "家具よびかた" %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "そのほか家具情報(備考)" %><br>
+    <%= f.text_field :biko %>
+  </div>
+  
   <div class="actions">
     <%= f.submit "新規登録"%>
   </div>
