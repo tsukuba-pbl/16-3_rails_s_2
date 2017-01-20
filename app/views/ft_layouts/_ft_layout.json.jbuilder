@@ -6,5 +6,5 @@ json.contents do
     json.left ft_item.left
     json.deg (ft_item.deg || 0)
   end
-  json.gazo_id ft_layout.room.uxsers[0].id
+  json.gazo_id ft_layout.room.id
 end
