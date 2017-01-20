@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119071946) do
+
+ActiveRecord::Schema.define(version: 20170120055857) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -58,6 +59,8 @@ ActiveRecord::Schema.define(version: 20170119071946) do
     t.string   "icon_cache"
     t.float    "width"
     t.float    "height"
+    t.string   "name"
+    t.string   "biko"
   end
 
   create_table "layouts", force: :cascade do |t|
