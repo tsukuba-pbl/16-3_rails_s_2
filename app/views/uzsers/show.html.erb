@@ -1,25 +1,23 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Uzser -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<h1>Uzser id:<%= @uzser.id %></h1>
-<p>
-  <strong>Name:</strong>
-  <%= @uzser.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @uzser.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name2) %>:</strong></dt>
+  <dd><%= @uzser.name2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name3) %>:</strong></dt>
+  <dd><%= @uzser.name3 %></dd>
+</dl>
 
-<p>
-  <strong>Name2:</strong>
-  <%= @uzser.name2 %>
-</p>
-
-<p>
-  <strong>Name3:</strong>
-  <%= @uzser.name3 %>
-</p>
-
-<p><%= link_to 'add a micropost to this uzser', add_micropost_get_uzser_path(@uzser) %></p>
-<h3>microposts</h3>
-<% @microposts = @uzser.microposts %>
-<%= render @microposts %>
-
-<%= link_to 'Edit', edit_uzser_path(@uzser) %> |
-<%= link_to 'Back', uzsers_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              uzsers_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_uzser_path(@uzser), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              uzser_path(@uzser),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
