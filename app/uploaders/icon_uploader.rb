@@ -11,8 +11,6 @@ class IconUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [50, 50]
   end
 
-  def public_id
-    return model.id 
-  end
+
 
 end
