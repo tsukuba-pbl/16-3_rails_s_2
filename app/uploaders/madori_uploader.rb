@@ -12,8 +12,6 @@ class MadoriUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [100, 100]
   end
 
-  def public_id
-    return model.id
-  end
+
   
 end
