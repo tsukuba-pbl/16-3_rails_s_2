@@ -25,22 +25,29 @@
 th {
 font-weight: normal;
 }
-    footer {
+footer {
       text-align: center;
       padding: 10px;
       background: #101010;
-    }
+}
+.navbar-brand {
+  background: url("./image/logo.png") no-repeat left center;
+  background-size: contain;
+  height: 40px;
+  width: 150px;
+}
+.navbar {
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
 --></style>
 </head>
   </head>
   <body>
 
 <div class="col-md-10">
-
-	<dvi>
-	<img alt="Brand" src="./image/title_logo.png" style="height: 100px;">
-	</dvi>
-
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -49,7 +56,12 @@ font-weight: normal;
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 			</button>
+			<a class="navbar-brand" href="#">
+
+			</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="navbarEexample2">
@@ -77,10 +89,8 @@ font-weight: normal;
     </header>
 	<!--　▲ ジャンボトロン　 -->
 
-
-
+	<CENTER>
 	<table>
-
 
 	<tr>
 	<th><img src="./image/image4.jpg" style="float:left"/></th>
@@ -122,6 +132,7 @@ font-weight: normal;
 	</th>
 	</tr>
 	</table>
+	</CENTER>
 
     <!--　▼ ジャンボトロン-赤　 -->
 <div class="red ">
@@ -136,14 +147,6 @@ font-weight: normal;
     </div>
 </div>
 
-<dvi align="center">
-<img src="./image/image10.png" style="float:left" class="img-responsive"/>
-</dvi>
-
-<br>
-<br>
-<br>
-<br>
 
 <footer class="container-fluid">
   <font color="white">
@@ -152,6 +155,7 @@ font-weight: normal;
 </footer>
 
 </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
