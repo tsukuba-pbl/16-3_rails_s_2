@@ -16,4 +16,8 @@ class Uxser < ActiveRecord::Base
     def exsitence_of_room_id
       errors.add(:room_id, "登録する写真がどの部屋の写真であるか不明です　指定されたidの部屋がみつかりません") unless Room.pluck(:id).include?(room_id)
     end
+    
+    def uniqueness_of_room_id
+      errors.add(:room_id, "すみません　一つの部屋に登録できる写真は一つまでです すでにその部屋には写真が登録されています")  if Uxser.find_by(room_id: room_id)
+    end
 end
