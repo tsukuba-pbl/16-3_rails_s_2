@@ -11,6 +11,7 @@ class Uxser < ActiveRecord::Base
   validates :offset, presence: true
 
   validate :exsitence_of_room_id
+  validate :uniqueness_of_room_id
 
   private
     def exsitence_of_room_id
