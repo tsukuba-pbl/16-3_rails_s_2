@@ -14,6 +14,6 @@ class Uxser < ActiveRecord::Base
 
   private
     def exsitence_of_room_id
-      errors.add(:room_id, "指定されたidの物件がない") unless Room.pluck(:id).include?(room_id)
+      errors.add(:room_id, "登録する写真がどの部屋の写真であるか不明です　指定されたidの部屋がみつかりません") unless Room.pluck(:id).include?(room_id)
     end
 end

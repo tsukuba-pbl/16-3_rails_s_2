@@ -13,6 +13,6 @@ class Room < ActiveRecord::Base
 
   private
     def exsitence_of_article_id
-      errors.add(:article_id, "指定されたidの物件がない") unless Article.pluck(:id).include?(article_id)
+      errors.add(:article_id, "登録する部屋がどの物件の部屋であるか不明です　指定されたidの物件がみつかりません") unless Article.pluck(:id).include?(article_id)
     end
 end
