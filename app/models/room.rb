@@ -8,4 +8,11 @@ class Room < ActiveRecord::Base
   validates :article_id, presence: true
   validates :width, presence: true
   validates :height, presence: true
+  
+  validate :exsitence_of_article_id
+
+  private
+    def exsitence_of_service_id
+      errors.add(:article_id, "指定されたidの物件がない") unless services.pluck(:id).include?(article_id)
+    end
 end
