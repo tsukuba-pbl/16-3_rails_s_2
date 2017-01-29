@@ -11,55 +11,83 @@
     </div>
   <% end %>
 
+<div class="container">
+
+<div class="form-group">
   <div class="field">
     <%= f.label "画像名" %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label "部屋の全天球画像" %><br>
     <%= f.file_field :avatar %>
   </div>
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label "部屋の全天球画像のURL" %><br>
-    <%= f.text_field :avatar_cache %>
+    <%= f.text_field :avatar_cache, :class => "form-control" %>
   </div>
+</div>
 
+<div class="form-group">
   <div class="field">
     <%= f.label "撮影点のx座標" %><br>
-    <%= f.text_field :zahyo_x %>
+    <%= f.text_field :zahyo_x, :class => "form-control" %>
   </div>
+</div>
 
+<div class="form-group">
   <div class="field">
     <%= f.label "撮影点のy座標" %><br>
-    <%= f.text_field :zahyo_y %>
+    <%= f.text_field :zahyo_y, :class => "form-control" %>
   </div>
+</div>
 
+<div class="form-group">
   <div class="field">
     <%= f.label "撮影点のz座標" %><br>
-    <%= f.text_field :zahyo_z %>
+    <%= f.text_field :zahyo_z, :class => "form-control" %>
   </div>
+</div>
 
+<div class="form-group">
   <div class="field">
     <%= f.label "offset" %><br>
-    <%= f.text_field :offset %>
+    <%= f.text_field :offset, :class => "form-control" %>
   </div>
-  
+</div>
+
+<div class="form-group">
   <div class="field">
-    <a href="/rooms">部屋管理画面へのリンク　部屋id確認用</a><br>
+    <a href="/rooms" class="btn btn-link">部屋管理画面へのリンク　部屋id確認用</a><br>
     <%= f.label "どの部屋の写真かをidで指定" %><br>
-    <%= f.text_field :room_id %>
+    <%= f.text_field :room_id, :class => "form-control" %>
   </div>
-  
+</div>
+
+<div class="form-group">
   <div class="field">
     <%= f.label "部屋の縦の長さ[m]" %><br>
-    <%= f.text_field :room_depth %>
+    <%= f.text_field :room_depth, :class => "form-control" %>
   </div>
+</div>
 
+<div class="form-group">
     <div class="field">
     <%= f.label "部屋の横の長さ[m]" %><br>
-    <%= f.text_field :room_width %>
+    <%= f.text_field :room_width, :class => "form-control" %>
   </div>
+</div>
+
   <div class="actions">
-    <%= f.submit "保存する"%>
+    <%= f.submit "保存する", :class => "btn btn-success btn-lg btn-block"%>
   </div>
+
+</div>
+
 <% end %>
