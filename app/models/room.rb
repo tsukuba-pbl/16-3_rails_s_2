@@ -12,7 +12,7 @@ class Room < ActiveRecord::Base
   validate :exsitence_of_article_id
 
   private
-    def exsitence_of_service_id
-      errors.add(:article_id, "指定されたidの物件がない") unless services.pluck(:id).include?(article_id)
+    def exsitence_of_article_id
+      errors.add(:article_id, "指定されたidの物件がない") unless Article.pluck(:id).include?(article_id)
     end
 end
