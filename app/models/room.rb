@@ -10,7 +10,7 @@ class Room < ActiveRecord::Base
   validates :height, presence: true
   
   validate :exsitence_of_article_id
-  validate :uniqueness_of_article_id
+  validate :uniqueness_of_article_id　, on: :registration
   
   private
     def exsitence_of_article_id

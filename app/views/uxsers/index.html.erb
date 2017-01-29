@@ -16,9 +16,10 @@
   <thead>
     <tr>
       <th>画像名</th>
+      <th>対応する部屋のid</th>
       <th>部屋の全天球写真のURL</th>
       <th>サムネイル</th>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -26,10 +27,12 @@
     <% @uxsers.each do |uxser| %>
       <tr>
         <td><%= uxser.name %></td>
+        <td><%= uxser.room_id %></td>
         <td><%= uxser.avatar %></td>
         <td><%= image_tag(uxser.avatar_url(:thumbnail)) %></td>
         <td class='btn btn-default btn-xs'><%= link_to '表示する', uxser %></td>
         <td class='btn btn-default btn-xs'><%= link_to '編集する', edit_uxser_path(uxser) %></td>
+        <td class='btn btn-default btn-xs'><%= link_to '削除する', uxser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
